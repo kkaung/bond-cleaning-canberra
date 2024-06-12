@@ -76,7 +76,7 @@ export const siteConfig = {
                     href: '/carpet-cleaning-canberra',
                 },
                 {
-                    title: 'End Of Lease Cleaning Service Canberra',
+                    title: 'End Of Lease Cleaning Canberra',
                     href: '/',
                 },
             ],
@@ -102,13 +102,16 @@ export const siteConfig = {
         },
         {
             title: 'Company',
-            items: [{ title: 'About Us', href: '/about' }],
+            items: [
+                { title: 'About Us', href: '/about' },
+                { title: 'Careers', href: '/careers' },
+            ],
         },
     ] satisfies FooterItem[],
     business: {
         email: 'contact@bondcleaningcanberra.net.au',
         phone: '+61 414076980',
-        address: '2d Parkstone Ave, Dulwich SA 5065',
+        address: '16 Kendall Ln, Canberra ACT 2601',
         openingHour: 'Mon – Sun: 9:00 AM – 5:00 PM',
     },
     rating: {

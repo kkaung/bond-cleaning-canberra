@@ -25,7 +25,7 @@ export default function MainNav({ items }: MainNavProps) {
     return (
         <div className="hidden gap-6 z-30 lg:flex lg:items-center">
             <Link href="/" className="text-muted-foreground">
-                Bond Cleaner Brisbane
+                Bond Cleaner Canberra
             </Link>
             <NavigationMenu>
                 <NavigationMenuList>

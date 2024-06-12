@@ -29,33 +29,56 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                         >
                             {siteConfig.name}
                         </Link>
-                        <Link
-                            href="/"
-                            className="text-sm font-semibold hover:underline"
-                        >
-                            Bond Cleaner Near Me
+                        <Link href="/" className="text-xs italic font-semibold">
+                            Bond Back Cleaning Canberra
                         </Link>
-                        <div className="flex flex-col mt-2 space-y-2">
+                        <div
+                            itemScope
+                            itemType="http://schema.org/LocalBusiness"
+                            className="flex flex-col mt-6 space-y-2"
+                        >
+                            <div itemProp="name" className="font-bold text-sm">
+                                {siteConfig.name}
+                            </div>
                             <div className={cn('cursor-pointer text-sm')}>
                                 <Icons.mail
                                     className="w-4 h-4 mr-1 inline"
                                     aria-hidden
                                 />
-                                {siteConfig.business.email}
+                                <span itemProp="email">
+                                    {siteConfig.business.email}
+                                </span>
                             </div>
-                            <div className={cn('cursor-pointer text-sm')}>
+                            <Link
+                                href={siteConfig.business.phone}
+                                className={cn('cursor-pointer text-sm')}
+                            >
                                 <Icons.phone
                                     className="w-4 h-4 mr-1 inline"
                                     aria-hidden
                                 />
-                                {siteConfig.business.phone}
-                            </div>
-                            <div className={cn('cursor-pointer text-sm')}>
+                                <span itemProp="telephone">
+                                    {siteConfig.business.phone}
+                                </span>
+                            </Link>
+                            <div
+                                itemProp="address"
+                                itemType="http://schema.org/PostalAddress"
+                                className={cn('cursor-pointer text-sm')}
+                            >
                                 <Icons.mapPin
                                     aria-hidden
                                     className="w-4 h-4 mr-1 inline"
                                 />
-                                {siteConfig.business.address}
+                                <span itemProp="streetAddress">
+                                    16 Kendall Ln
+                                </span>
+                                ,{' '}
+                                <span itemProp="addressLocality">
+                                    Canberra ACT
+                                </span>{' '}
+                                <span itemProp="postalCode">2601</span>{' '}
+                                <span itemProp="addressCountry">Australia</span>
                             </div>
                             <div className={cn('cursor-pointer text-sm')}>
                                 <Icons.clock
@@ -64,13 +87,14 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                                 />
                                 {siteConfig.business.openingHour}
                             </div>
+                            <Link
+                                href="/"
+                                className="text-muted-foreground text-sm mt-4 hover:text-primary"
+                                itemProp="url"
+                            >
+                                {siteConfig.domain}
+                            </Link>
                         </div>
-                        <Link
-                            href="/"
-                            className="text-muted-foreground text-sm mt-8 hover:text-primary"
-                        >
-                            {siteConfig.domain}
-                        </Link>
                     </div>
                     <section
                         id="footer-links"

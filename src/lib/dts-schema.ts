@@ -20,9 +20,9 @@ export const OrganizationSchema: Organization = {
     telephone: siteConfig.business.phone,
     address: {
         '@type': 'PostalAddress',
-        streetAddress: '151 George St Brisbane City',
-        postalCode: '4000',
-        addressLocality: 'Brisbane City',
+        streetAddress: '16 Kendall Ln',
+        postalCode: '2601',
+        addressLocality: 'Canberra',
         addressCountry: 'Australia',
     },
     sameAs: [
@@ -67,9 +67,9 @@ export const LocalBusinessSchema: LocalBusiness = {
     telephone: siteConfig.business.phone,
     address: {
         '@type': 'PostalAddress',
-        streetAddress: '151 George St Brisbane City',
-        postalCode: '4000',
-        addressLocality: 'Brisbane City',
+        streetAddress: '16 Kendall Ln',
+        postalCode: '2601',
+        addressLocality: 'Canberra',
         addressCountry: 'Australia',
     },
 };
